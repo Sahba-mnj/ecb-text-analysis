@@ -48,6 +48,12 @@ https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2026/
 
 ---
 
+## Why TextBlob?
+
+TextBlob was selected because the assignment required a sentiment analysis package other than VADER. TextBlob provides a simple polarity-based sentiment analysis method that works well for paragraph-level textual analysis.
+
+---
+
 ## Folder Structure
 
 ```text
@@ -57,24 +63,24 @@ ecb-text-analysis/
 │   └── ecb_text_analysis.py
 │
 ├── data/
-│   └── ecb_press_conference.txt
+│   └── ecb_press_conference_2026-04-30.txt
 │
 ├── outputs/
-│   ├── sentiment.csv
-│   ├── word_freq.csv
-│   ├── wordcloud.png
-│   ├── sentiment_trend.png
-│   ├── top_positive.csv
-│   └── top_negative.csv
+│   ├── ecb_paragraph_sentiment.csv
+│   ├── ecb_top_words.csv
+│   ├── ecb_wordcloud.png
+│   ├── ecb_sentiment_plot.png
+│   ├── top_positive_paragraphs.csv
+│   └── top_negative_paragraphs.csv
+│
+├── environment.yml
 │
 └── README.md
 ```
 
----
-
 ## Main Findings
 
 
-Most paragraphs showed neutral to mildly positive sentiment, reflecting the formal and technical communication style of ECB monetary policy communication.
+Most paragraphs displayed neutral to mildly positive sentiment, reflecting the cautious and technical communication style typically used in ECB monetary policy discussions.
 
 The analysis highlighted recurring themes related to inflation, markets, growth, and financial conditions.
