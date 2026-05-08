@@ -1,12 +1,10 @@
 # ECB Text Analysis Project
 
-## Overview
+## Project Summary
 
-This project performs textual analysis on a European Central Bank (ECB) monetary policy press conference page.
+The project analyses text from a European Central Bank (ECB) monetary policy press conference page.
 
-The script scrapes the press conference text directly from the ECB website, cleans the extracted text, performs paragraph-level sentiment analysis using TextBlob, and generates word frequency statistics and visualizations.
-
----
+The script scrapes the press conference text directly from the ECB website, cleans the scraped text, performs paragraph-level sentiment analysis with TextBlob, and generates word frequency statistics and visualizations.
 
 ## Selected ECB Page
 
@@ -23,10 +21,10 @@ https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2026/
 ## Project Features
 
 - Web scraping with Requests and BeautifulSoup
-- HTML parsing using CSS selectors
+- HTML parsing with CSS selectors
 - Clean text extraction
 - Paragraph-by-paragraph sentiment analysis
-- Sentiment polarity scoring with TextBlob
+- Sentiment polarity scoring using TextBlob
 - CSV export of sentiment results
 - Word frequency analysis
 - Custom stopword filtering
@@ -50,7 +48,7 @@ https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2026/
 
 ## Why TextBlob?
 
-TextBlob was selected because the assignment required a sentiment analysis package other than VADER. TextBlob provides a simple polarity-based sentiment analysis method that works well for paragraph-level textual analysis.
+TextBlob was chosen because the assignment required a sentiment analysis tool other than VADER. The tool offers a straightforward sentiment analysis technique based on polarity which suits paragraph-level textual analysis well.
 
 ---
 
@@ -78,9 +76,14 @@ ecb-text-analysis/
 └── README.md
 ```
 
+
+
 ## Main Findings
 
+The sentiment analysis indicated that most ECB press conference paragraphs scored relatively neutral to slightly positive sentiments. This reflects the ECB’s cautious and data-driven communication style in monetary policy discussions.
 
-Most paragraphs displayed neutral to mildly positive sentiment, reflecting the cautious and technical communication style typically used in ECB monetary policy discussions.
+Paragraphs discussing war-related uncertainty, energy price concerns, inflation threats, and unfavorable growth conditions had relatively neutral to negative sentiment scores. On the other hand, paragraphs regarding the ECB’s policy continuity, stability of the financial sector, and controlling inflation in the medium term had relatively positive sentiment scores.
 
-The analysis highlighted recurring themes related to inflation, markets, growth, and financial conditions.
+The word frequency analysis and word cloud highlighted recurring themes such as energy, growth, financial conditions, markets, inflation outlook, and monetary policy transmission.
+
+Because ECB communication is highly technical and formal, the sentiment analysis results should be interpreted as general indicators rather than exact measurements of economic optimism or pessimism.

@@ -65,7 +65,11 @@ print(f"Total paragraphs found: {len(text_list)}")
 full_text = "\n\n".join(text_list)
 
 # Save text file
-with open("data/ecb_press_conference.txt", "w", encoding="utf-8") as f:
+with open(
+    "data/ecb_press_conference_2026-04-30.txt",
+    "w",
+    encoding="utf-8"
+) as f:
     f.write(full_text)
 
 print("Text saved successfully")
@@ -79,8 +83,7 @@ import pandas as pd
 
 results = []
 
-for i, paragraph in enumerate(text_list):
-
+for i, paragraph in enumerate(text_list, start=1):
     blob = TextBlob(paragraph)
 
     polarity = blob.sentiment.polarity
@@ -94,7 +97,7 @@ for i, paragraph in enumerate(text_list):
         label = "neutral"
 
     results.append([
-        i + 1,
+        i,
         paragraph,
         polarity,
         label
@@ -153,10 +156,13 @@ custom_stopwords = {
     "on", "is", "with", "that", "we", "are",
     "this", "will", "from", "have", "has",
     "ecb", "euro", "policy", "inflation",
-    "interest", "rates", "rate", "percent", "said", "bank",
-"banks",
-"european",
-"central"
+    "interest", "rates", "rate", "percent",
+    "said", "bank", "banks", "european",
+    "central",
+
+    # extra stopwords
+    "cent", "would", "could", "there", "what", "your", "very",
+    "because", "think", "president"
 }
 
 # Remove stopwords
